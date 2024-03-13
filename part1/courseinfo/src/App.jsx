@@ -6,13 +6,25 @@ const Header = (props) => {
   )
 }
 
-const Content = (props) => {
-  const rows = []
-  for (let i = 0; i < props.parts.length; i++) {
-    rows.push(<p>{props.parts[i]} {props.exercises[i]}</p>)
-  }
+const Part = (props) => {
   return (
-    <>{rows}</>
+    <>
+      <p>{props.part} {props.exercise}</p>
+    </>
+  )
+}
+
+const Content = (props) => {
+  // const rows = []
+  // for (let i = 0; i < props.parts.length; i++) {
+  //   rows.push(<p>{props.parts[i]} {props.exercises[i]}</p>)
+  // }
+  return (
+    <>
+      <Part part = {props.parts[0]} exercise = {props.exercises[0]}/>
+      <Part part = {props.parts[1]} exercise = {props.exercises[1]}/>
+      <Part part = {props.parts[2]} exercise = {props.exercises[2]}/>
+    </>
   )
 }
 
